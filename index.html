@@ -23,7 +23,7 @@
 
         body {
             margin: 0px;
-            padding: 0px;
+            padding: 30px;
             overflow-x: hidden;
 			background:#FFF
         }
@@ -236,7 +236,7 @@ button.red:active {
 <option>라이덴 쇼군</option>
 <option>쿠죠 사라</option>
 <option>야에 미코</option>
-<option>쿠키 시노부(ori)</option>
+<option>쿠키 시노부</option>
 </optgroup>
 <optgroup label="바위">
 <option>종려</option>
@@ -600,10 +600,12 @@ break;
 case "야란":
 this.lv80a={baseHP:14450,baseDEF:548,baseATK:244},this.lv90={baseHP:14450,baseDEF:548,baseATK:244}
 this.mode=2
+this.Etype=2
 break;
 case "쿠키 시노부":
 this.lv80a={baseHP:12289,baseDEF:751,baseATK:212},this.lv90={baseHP:12289,baseDEF:751,baseATK:212}
-this.mode=13
+this.mode=19
+this.Etype=5
 break;
 	default:
 break;
@@ -760,7 +762,7 @@ function SetChar(mtype){
 		res4=""
 		res5=""
 		//武器类型point
-		var it2=[' 요이미야 엠버 타르탈리아 디오나 피슬 감우 쿠죠 사라 에일로이 벤티 고로 ',' 바바라 클레 리사 모나 응광 설탕 연비 산고노미야 코코미 야에 미코 ',' 소 라이덴 쇼군 호두 로자리아 향릉 종려 토마 신학 운근 ',' 북두 다이루크 레이저 노엘 유라 사유 중운 신염 아라타키 이토 ',' 알베도 카미사토 아야카 베넷 케이아 각청 카에데하라 카즈하 치치 진 행추 바람행자 바위행자 번행자 카미사토 아야토 '];
+		var it2=[' 요이미야 엠버 타르탈리아 디오나 피슬 감우 쿠죠 사라 에일로이 벤티 고로 야란 ',' 바바라 클레 리사 모나 응광 설탕 연비 산고노미야 코코미 야에 미코 ',' 소 라이덴 쇼군 호두 로자리아 향릉 종려 토마 신학 운근 ',' 북두 다이루크 레이저 노엘 유라 사유 중운 신염 아라타키 이토 ',' 알베도 카미사토 아야카 베넷 케이아 각청 카에데하라 카즈하 치치 진 행추 바람행자 바위행자 번행자 카미사토 아야토 쿠키 시노부 '];
 			for (var i =0;i<=4; i++) {
 				if (it2[i].indexOf(" "+document.getElementById('Char').value+" ")>=0){
 					weapont=i
@@ -1241,8 +1243,8 @@ function update(){
 function naturecall(s){
 	var answer=''
 					if(s[1]=="1"){answer+="공 "}
-					if(s[0]=="1"){answer+="생명력 "}
-					if(s[2]=="1"){answer+="방어력 "}
+					if(s[0]=="1"){answer+="체 "}
+					if(s[2]=="1"){answer+="방 "}
 					if(s[3]=="1"){answer+="원마 "}
 					if(s[6]=="1"){answer+="원충 "}
 					if(s[4]=="1"){answer+="치확 "}
@@ -1255,12 +1257,12 @@ function naturecall(s){
 function checkname(n){
 	if(n=="호두" || n=="노엘" || n=="아라타키 이토" || n=="산고노미야 코코미"){
 		lastcheck=1;
-		lastcheckstr="공 击"
+		lastcheckstr="공격력"
 		return 0.4
 	}
 	if(n=="카미사토 아야토"){
 		lastcheck=0;
-		lastcheckstr="생명력"
+		lastcheckstr="체력"
 		return 0.5
 	}
 		lastcheck=-1;
