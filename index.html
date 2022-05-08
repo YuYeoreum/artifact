@@ -4,6 +4,16 @@
 <!-- saved from url=(0035)http://spongem.com/ajglz/ys/ys.html -->
 <html xmlns="http://www.w3.org/1999/xhtml" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G997KGJWNP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G997KGJWNP');
+</script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>성유물 계산기 v2.7</title>
 
@@ -823,7 +833,7 @@ function SetChar(mtype){
 
 		
 		var temppp=GetE("T5")*2+GetE("T6")
-		res3=res3+""+res4+"，치확/치피 점수 "+temppp.toFixed(1).toString()+"점"
+		res3=res3+"주옵: "+res4+"，치확/치피 점수 "+temppp.toFixed(1).toString()+"점"
 		
 		if(r[0]+r[1]+r[2]+r[3]+r[4]+r[5]+r[6] > 53){res=res+"<p><font size='1' color='red'>*성유물 세부사항 값이 올바르지 않을 수 있습니다.</font></p>"}
 		
@@ -1001,7 +1011,7 @@ function SetChar(mtype){
 
 		document.getElementById('result2').innerHTML="<font size='3' color='"+res5+"'><b>"+res3+"</b></font>"
 		if(GetE("QQ")==542 && (weapont==4)){
-			res2=res2+"<p><font size='2'>——磐岩结绿附加공 击——</font></p>"
+			res2=res2+"<p><font size='2'>반암결록 부가공격</font></p>"
 			res2=res2+"<p><font size='2'>1원마："+(r[0]*0.218402778).toFixed(1).toString()+"점</p>"
 			res2=res2+"<p><font size='2'>2원마："+(r[0]*0.273003472).toFixed(1).toString()+"점</p>"
 			res2=res2+"<p><font size='2'>3원마："+(r[0]*0.327604167).toFixed(1).toString()+"점</p>"
@@ -1183,12 +1193,12 @@ function ShowPage2(mode){
 	}
 	if (mode==2){
 		document.getElementById("page1").innerHTML='<table border="1" align="center" class="gridtable"><tr><th>캐릭명</th><th>합계</th><th>옵션 선택</th></tr>'+temphtml+'</table>'
-		document.getElementById("buttonlabel").innerHTML='<p align="center" class="tip"><font size="2">*在本地计算过的不同的角色的结果（仅限方案1）会以列表形式显示在此，可自行选择对你来说有效的점</font></p><p align="center"><button type="button" class="red" onclick="window.location.href=\'\'" >돌아가기</button> <button type="button" onclick="ShowPage2(1)" class="blue">더 많은 결과보기</button></p>'
+		document.getElementById("buttonlabel").innerHTML='<p align="center" class="tip"><font size="2">*케이스 1의 로컬 계산결과 입니다. 체크리스트를 선택하여 적절한 옵션을 변경할 수 있습니다.</font></p><p align="center"><button type="button" class="red" onclick="window.location.href=\'\'" >돌아가기</button> <button type="button" onclick="ShowPage2(1)" class="blue">더 많은 결과보기</button></p>'
 		//window.location.href='#page1'
 		update()
 	}else{
 		document.getElementById("page1").innerHTML='<table border="1" align="center" class="gridtable"><tr><th>캐릭명</th><th>합계</th><th>치피</th><th>사용자 지정 옵션</th><th>주옵</th></tr>'+temphtml+'</table>'
-		document.getElementById("buttonlabel").innerHTML='<p align="center" class="tip"><font size="2">*在本地计算过的不同的角色的结果（仅限方案1）会以列表形式显示在此，可自行选择对你来说有效的점</font></p><p align="center"><button type="button" class="red" onclick="window.location.href=\'\'" >돌아가기</button> <button type="button" onclick="ShowPage2(2)" class="blue">옵션 선택</button></p>'
+		document.getElementById("buttonlabel").innerHTML='<p align="center" class="tip"><font size="2">*케이스 1의 로컬 계산결과 입니다. 체크리스트를 선택하여 적절한 옵션을 변경할 수 있습니다.</font></p><p align="center"><button type="button" class="red" onclick="window.location.href=\'\'" >돌아가기</button> <button type="button" onclick="ShowPage2(2)" class="blue">옵션 선택</button></p>'
 		//window.location.href='#page1'
 	}
 }
