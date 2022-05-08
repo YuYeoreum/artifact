@@ -770,7 +770,7 @@ function SetChar(mtype){
 		if (mtype==2){
 			fileexist=Load()
 			//武器库point
-			var it=['<select id="Weapon" onchange="SetWeapon()"><option value="0">무기선택</option><option value="674">天空之翼</option><option value="608">阿莫斯/冬极/飞雷/终末</option><option value="565">祭礼弓/暗巷猎手</option><option value="510">弓藏/幽夜/风花/绝弦/试作</option><option value="454">西风猎弓/钢轮弓/破魔之弓</option></select>','<select id="Weapon" onchange="SetWeapon()"><option value="0">무기선택</option><option value="674">天空之卷</option><option value="608">神乐/尘锁/四风/月华</option><option value="565">白辰/万国/暗巷</option><option value="510">试作/匣里/西风</option><option value="454">祭礼残章/嘟嘟可故事集</option></select>','<select id="Weapon" onchange="SetWeapon()"><option value="0">무기선택</option><option value="741">息灾</option><option value="674">和璞鸢/天空之脊</option><option value="608">薙草/护摩/贯虹</option><option value="620">断浪长鳍</option><option value="565">西风/千岩/流月针</option><option value="510">渔获</option><option value="454">决斗之枪/匣里灭辰</option></select>','<select id="Weapon" onchange="SetWeapon()"><option value="0">무기선택</option><option value="741">松籁响起之时</option><option value="674">天空之傲</option><option value="608">无工之剑/狼的末路</option><option value="542">赤角石溃杵</option><option value="565">雪葬的星银/试作古华</option><option value="510">白影/螭骨/千岩/恶王丸</option><option value="454">西风大剑/衔珠海皇</option></select>','<select id="Weapon" onchange="SetWeapon()"><option value="0">무기선택</option><option value="674">风鹰剑/雾切之回光</option><option value="608">波乱/斫峰/苍古/天空</option><option value="542">磐岩结绿</option><option value="620">暗巷闪光</option><option value="565">试作斩岩</option><option value="510">腐殖/黑剑/铁蜂刺/匣里</option><option value="454">纺锤/天目/祭礼/西风</option></select>'];
+			var it=['<select id="Weapon" onchange="SetWeapon()"><option value="0">무기선택</option><option value="674">천공의 날개</option><option value="608">아모스/극지/비뢰/종탄</option><option value="565">제례활/뒷골목</option><option value="510">녹활/유야의왈츠/바람꽃/절현/담월</option><option value="454">페보활/강철궁/파마궁</option></select>','<select id="Weapon" onchange="SetWeapon()"><option value="0">무기선택</option><option value="674">천공의 두루마리</option><option value="608">카구라/자물쇠/사풍/불멸의달빛</option><option value="565">맹세의눈동자/만국/뒷골목</option><option value="510">호박/일월/페보</option><option value="454">제례악장/도도코</option></select>','<select id="Weapon" onchange="SetWeapon()"><option value="0">무기선택</option><option value="741">식재</option><option value="674">화박연/마?루</option><option value="608">예초/호마/관홍</option><option value="620">지느러미</option><option value="565">페보/천암/유월창</option><option value="510">포크</option><option value="454">결투의창/용학살창</option></select>','<select id="Weapon" onchange="SetWeapon()"><option value="0">무기선택</option><option value="741">송뢰를 울릴 무렵</option><option value="674">천공의 긍지</option><option value="608">무공의검/늑말</option><option value="542">쇄석의 붉은 뿔</option><option value="565">설장/고화</option><option value="510">백영/이무기/천암/아쿠오마루</option><option value="454">페보대검/참치</option></select>','<select id="Weapon" onchange="SetWeapon()"><option value="0">무기선택</option><option value="674">매검/회광</option><option value="608">후츠/참봉/서약/천공</option><option value="542">반암결록</option><option value="620">뒷골목의 섬광</option><option value="565">참암 프로토타입</option><option value="510">부식/칠흑/벌침/용포</option><option value="454">방추/아메노마/제례검/페포검</option></select>'];
 			document.getElementById('WeaponList').innerHTML=it[weapont]
 		}
 		
@@ -841,7 +841,7 @@ function SetChar(mtype){
 		
 		if(GetE("QQ")>741 || GetE("QQ")<=0){res=res+"<p><font size='1' color='red'>*무기 기초 공격력 데이터가 올바르지 않을 수 있습니다.</font></p>"}
 		
-		if(J.mode!=6 && J.mode!=7 && J.mode!=13 && J.mode!=14 && J.mode!=16 && J.mode!=18 ){res1=res1+"<p>공격 치피：<font size='4'>"+(r[5]+r[1]+r[6]).toFixed(1).toString()+"</font>점</p>"}
+		if(J.mode!=6 && J.mode!=7 && J.mode!=13 && J.mode!=14 && J.mode!=16 && J.mode!=18 ){res1=res1+"<p>공 치피：<font size='4'>"+(r[5]+r[1]+r[6]).toFixed(1).toString()+"</font>점</p>"}
 		//호두、诺埃尔、라이덴 쇼군、산고노미야 코코미、고로、야에 미코不显示默认的这一条
 		var tempshowload
 
@@ -999,7 +999,7 @@ function SetChar(mtype){
 		temp6=temp6.toFixed(1)
 		if(res1.indexOf(naturecall(tempshowload))<0){
 			var tempgg=checkname(nt)
-			res1="<p>"+naturecall(tempshowload)+"（커스텀 옵션"+ ((tempgg>0 && tempshowload[lastcheck]=="1")?"，"+lastcheckstr+"按"+tempgg.toFixed(1)+"折算":"")  +"）：<font size='4'>"+temp6.toString()+"</font>점</p>"+res1
+			res1="<p>"+naturecall(tempshowload)+"（커스텀 옵션"+ ((tempgg>0 && tempshowload[lastcheck]=="1")?"，"+lastcheckstr+"은 "+tempgg.toFixed(1)+"로 계산":"")  +"）：<font size='4'>"+temp6.toString()+"</font>점</p>"+res1
 		}
 		res1=res1.replace(/（/g, "<font size='2'>（")
 		res1=res1.replace(/）/g, "）</font>")		
