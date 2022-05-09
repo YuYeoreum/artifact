@@ -323,7 +323,7 @@ button.red:active {
 <button type="button" onclick="addset()"> 신규 방안 검토</button>
 </p>
 </div>
-<div id="buttonlabel" align="center"><button class="blue" type="button" onclick="ShowPage2(1);window.location.href='#page1'"> 로컬 기록 보기</button> <button type="button" onclick="remove()" class="red"> 데이터 지우기</button></div>
+<div id="buttonlabel" align="center"><button class="blue" type="button" onclick="ShowPage2(1);window.location.href='#page1'"> 설정 보기</button> <button type="button" onclick="remove()" class="red"> 데이터 지우기</button></div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -669,7 +669,7 @@ function addset(){
 
 function remove(){
 	var temp=document.getElementById('Sets').value
-	var temp2="-케이스"+temp
+	var temp2=" 케이스"+temp
 	var temp3
 	if(temp=='1'){
 	temp=''
@@ -685,7 +685,7 @@ function remove(){
 			}
 		}
 	}
-	alert("로컬 데이터 : "+document.getElementById('Char').value+temp2+" 지워짐")
+	alert(document.getElementById('Char').value+temp2+" 지워짐"+"")
 	SetCharL()
 }
 
@@ -843,7 +843,7 @@ function SetChar(mtype){
 		
 		if(GetE("QQ")>741 || GetE("QQ")<=0){res=res+"<p><font size='1' color='red'>*무기 기초 공격력 데이터가 올바르지 않을 수 있습니다.</font></p>"}
 		
-		if(J.mode!=6 && J.mode!=7 && J.mode!=13 && J.mode!=14 && J.mode!=16 && J.mode!=18 ){res1=res1+"<p>공 치피：<font size='4'>"+(r[5]+r[1]+r[6]).toFixed(1).toString()+"</font>점</p>"}
+		if(J.mode!=6 && J.mode!=7 && J.mode!=13 && J.mode!=14 && J.mode!=16 && J.mode!=18 ){res1=res1+"<p>공 치명：<font size='4'>"+(r[5]+r[1]+r[6]).toFixed(1).toString()+"</font>점</p>"}
 		//호두、诺埃尔、라이덴 쇼군、산고노미야 코코미、고로、야에 미코不显示默认的这一条
 		var tempshowload
 
@@ -901,7 +901,7 @@ function SetChar(mtype){
 			res1=res1+"<p>공 원마 원충 치명：<font size='4'>"+(r[5]+r[1]+r[6]+r[4]+r[3]).toFixed(1).toString()+"</font>점</p>"
 			{tempshowload="0101111"}
 				break;
-			case 12://万叶
+			case 12://카즈하
 			res1=res1+"<p>원마 원충：<font size='4'>"+(r[3]+r[4]).toFixed(1).toString()+"</font>점</p>"
 			res1=res1+"<p>공 원마 치명：<font size='4'>"+(r[5]+r[1]+r[6]+r[3]).toFixed(1).toString()+"</font>점</p>"
 			{tempshowload="0101111"}
@@ -938,7 +938,7 @@ function SetChar(mtype){
 			res1=res1+"<p>공 원충 치명：<font size='4'>"+(r[5]+r[1]+r[4]+r[6]).toFixed(1).toString()+"</font>점</p>"
 			{tempshowload="0100111"}
 			break;	
-			case 20://绫人
+			case 20://아야토
 			res1=res1+"<p>공 체 치명 : <font size='4'>"+(r[5]+r[1]+r[0]*0.5+r[6]).toFixed(1).toString()+"</font>점</p>"
 			{tempshowload="1100110"}
 			break;	
@@ -1193,7 +1193,7 @@ function ShowPage2(mode){
 	}
 	if (mode==2){
 		document.getElementById("page1").innerHTML='<table border="1" align="center" class="gridtable"><tr><th>캐릭명</th><th>합계</th><th>옵션 선택</th></tr>'+temphtml+'</table>'
-		document.getElementById("buttonlabel").innerHTML='<p align="center" class="tip"><font size="2">*케이스 1의 로컬 계산결과 입니다. 체크리스트를 선택하여 적절한 옵션을 변경할 수 있습니다.</font></p><p align="center"><button type="button" class="red" onclick="window.location.href=\'\'" >돌아가기</button> <button type="button" onclick="ShowPage2(1)" class="blue">더 많은 결과보기</button></p>'
+		document.getElementById("buttonlabel").innerHTML='<p align="center" class="tip"><font size="2">*케이스 1의 로컬 계산결과 입니다. 체크리스트를 선택하여 적절한 옵션을 변경할 수 있습니다.</font></p><p align="center"><button type="button" class="red" onclick="window.location.href=\'\'" >돌아가기</button> <button type="button" onclick="ShowPage2(1)" class="blue">확인</button></p>'
 		//window.location.href='#page1'
 		update()
 	}else{
