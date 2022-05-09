@@ -174,8 +174,9 @@ button.red:active {
 <body>
 <p class="t">성유물 계산기 v2.7</p>
 <p align="center" class="wb"><a href="https://bbs.nga.cn/read.php?tid=26655137">NGA 원문</a></p>
-<p align="center" class="wb"><a href="arca.live">한국어 사용설명서</p>
-<p align="center" class="wb"><a>원작자: NGA-pressure_pressure</a></p>
+<p align="center" class="wb"><a href="https://yuyeoreum.github.io/artifact/index.html">한국어 사용설명서</p>
+<p align="center" class="wb"><a>원저자: NGA-pressure_pressure</a></p>
+<p align="center" class="wb"><a>번역: @원챈, dwd0809</a></p>
 <p align="center" class="wb"><a>20~25점: 잘키웠다, 26~30점: 졸업</a></p>
 <p align="center" class="wb"><a>캐릭터 상세 창 -> 성유물 창 -> 성유물 자세히 클릭</a></p>
 <p align="center" class="wb"><a>※야란과 시노부는 lv90만 작동</a></p>
@@ -776,7 +777,7 @@ function SetChar(mtype){
 			hp=J.lv80a["baseHP"]
 			df=J.lv80a["baseDEF"]
 			atk=J.lv80a["baseATK"]+GetE("QQ")
-			res3="80돌파"+document.getElementById('Char').value+"，"
+			res3="80돌파 "+document.getElementById('Char').value+"，"
 			}
 		else{
 			hp=J.lv90["baseHP"]
@@ -1007,12 +1008,12 @@ function SetChar(mtype){
 
 		document.getElementById('result2').innerHTML="<font size='3' color='"+res5+"'><b>"+res3+"</b></font>"
 		if(GetE("QQ")==542 && (weapont==4)){
-			res2=res2+"<p><font size='2'>반암결록 부가공격</font></p>"
-			res2=res2+"<p><font size='2'>1원마："+(r[0]*0.218402778).toFixed(1).toString()+"점</p>"
-			res2=res2+"<p><font size='2'>2원마："+(r[0]*0.273003472).toFixed(1).toString()+"점</p>"
-			res2=res2+"<p><font size='2'>3원마："+(r[0]*0.327604167).toFixed(1).toString()+"점</p>"
-			res2=res2+"<p><font size='2'>4원마："+(r[0]*0.382204861).toFixed(1).toString()+"점</p>"
-			res2=res2+"<p><font size='2'>5원마："+(r[0]*0.436805556).toFixed(1).toString()+"점</p>"
+			res2=res2+"<p><font size='2'>반암 체력비례 공격력 점수</font></p>"
+			res2=res2+"<p><font size='2'>1재련："+(r[0]*0.218402778).toFixed(1).toString()+"점</p>"
+			res2=res2+"<p><font size='2'>2재련："+(r[0]*0.273003472).toFixed(1).toString()+"점</p>"
+			res2=res2+"<p><font size='2'>3재련："+(r[0]*0.327604167).toFixed(1).toString()+"점</p>"
+			res2=res2+"<p><font size='2'>4재련："+(r[0]*0.382204861).toFixed(1).toString()+"점</p>"
+			res2=res2+"<p><font size='2'>5재련："+(r[0]*0.436805556).toFixed(1).toString()+"점</p>"
 		}
 		
 		if(fileexist){
@@ -1265,11 +1266,6 @@ function checkname(n){
 		lastcheckstr=""
 		return -1
 }
-/*
-function info(){
-	alert("使用方法：\n1、选好角色和等级(80突破以下直接使用80突破即可)\n2、然后选择好沙漏、杯子和帽子的주옵\n3、填写（或选择）武器的공 击力白值\n4、游戏内点开角色→圣遗物→圣遗物详情按钮，在表格中依次填入对应项目的数值")
-}
-*/
 </script>
 </body>
 <div style="text-align:center;margin:4px">아카라이브 원신채널：<a href="https://arca.live/genshin" target="_blank">https://arca.live/genshin</a></a></div>
